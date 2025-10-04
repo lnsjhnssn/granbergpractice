@@ -7,7 +7,8 @@
     "build": "astro build",
     "start": "HOST=0.0.0.0 node ./dist/server/entry.mjs",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "diag": "node -e \"console.log('node',process.version);\" && npm -v && node -e \"const fs=require('fs');console.log('has package.json:',fs.existsSync('package.json'));console.log('has astro.config.mjs:',fs.existsSync('astro.config.mjs'));if(fs.existsSync('astro.config.mjs')){console.log('\\n--- astro.config.mjs ---\\n'+fs.readFileSync('astro.config.mjs','utf8'));}\" && npx astro --version"
   },
   "dependencies": {
     "@astrojs/node": "^9.4.4",
